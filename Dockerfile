@@ -4,7 +4,7 @@ FROM openjdk:17-alpine AS builder
 
 WORKDIR /app
 COPY . .
-RUN ./gradlew build
+RUN gradle clean build
 
 #Run stage
 FROM openjdk:17-alpine AS runner
